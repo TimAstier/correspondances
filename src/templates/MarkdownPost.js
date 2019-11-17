@@ -1,23 +1,78 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
+import { Link, graphql } from "gatsby"
+
+import "../fonts/fonts-post.css"
+// import Bio from '../components/Bio';
 import Layout from "../components/Layout"
+import SEO from "../components/Seo"
+// import Signup from '../components/Signup';
+// import Panel from '../components/Panel';
+// import { formatPostDate, formatReadingTime } from '../utils/helpers';
+// import { rhythm } from "../utils/typography"
+// import {
+//   codeToLanguage,
+//   createLanguageLink,
+//   loadFontsForCode,
+// } from '../utils/i18n';
+
+const GITHUB_USERNAME = "TimAstier"
+const GITHUB_REPO_NAME = "corrrespondances"
+
+// const MarkdownPost = ({ data }) => {
+//   const { markdownRemark } = data
+//   const { frontmatter, html } = markdownRemark
 
 const MarkdownPost = ({ data }) => {
   const { markdownRemark } = data
-  const { frontmatter, html } = markdownRemark
+  const { html } = markdownRemark
+
+  const post = markdownRemark
+  const editUrl = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO_NAME}/edit/master/src/pages/${post.slug}`
+
   return (
     <Layout>
-      <Link to="/">Go Back</Link>
-      <div className="blog-post-container">
-        <div className="blog-post">
-          <h1>{frontmatter.title}</h1>
-          <h2>{frontmatter.date}</h2>
-          <div
-            className="blog-post-content"
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
-        </div>
-      </div>
+      <SEO
+        title={post.frontmatter.title}
+        // description={post.frontmatter.spoiler}
+        // slug={post.fields.slug}
+      />
+      <main>
+        <article>
+          <header>
+            <h1 style={{ color: "var(--textTitle)" }}>
+              {post.frontmatter.title}
+            </h1>
+          </header>
+          <div dangerouslySetInnerHTML={{ __html: html }} />
+          <footer>
+            <p>
+              <a href={editUrl} target="_blank" rel="noopener noreferrer">
+                Edit on GitHub
+              </a>
+            </p>
+          </footer>
+        </article>
+      </main>
+      <aside>
+        <h3
+          style={{
+            fontFamily: "Montserrat, sans-serif",
+            // marginTop: rhythm(0.25),
+            marginTop: 0.25,
+          }}
+        >
+          <Link
+            style={{
+              boxShadow: "none",
+              textDecoration: "none",
+              color: "var(--pink)",
+            }}
+            to={"/"}
+          >
+            Correspondances
+          </Link>
+        </h3>
+      </aside>
     </Layout>
   )
 }

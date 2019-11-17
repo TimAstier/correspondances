@@ -13,8 +13,12 @@
 
 - [x] Fetch posts from Wordpress
 - [x] Markdown articles
-- [ ] TypeScript
-- [ ] Display both WP and MD articles in index.js
+- [x] Code snippets in markdown via prismjs
+- [ ] Eslint
+- [ ] Post.spoiler
+- [ ] Fix fonts and font-style
+- [ ] Only MD articles (drop wordpress)
+- [ ] Images in markdown
 - [ ] Same layout for WP and MD articles
 - [ ] Support formated code snippets in markdown
 - [ ] Improve layout (see overreacted.io)

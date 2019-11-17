@@ -13,6 +13,7 @@
 
 - [x] Fetch posts from Wordpress
 - [x] Markdown articles
+- [ ] TypeScript
 - [ ] Display both WP and MD articles in index.js
 - [ ] Same layout for WP and MD articles
 - [ ] Support formated code snippets in markdown

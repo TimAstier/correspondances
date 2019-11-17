@@ -1,35 +1,53 @@
 import React from "react"
 import { StaticQuery, graphql, Link } from "gatsby"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Layout from "../components/Layout"
+import SEO from "../components/Seo"
 
 const Blog = () => (
-  <StaticQuery
-    query={graphql`
-      query BlogAllPostQuery {
-        allWordpressPost(sort: { fields: [date], order: DESC }) {
-          edges {
-            node {
-              date(formatString: "DD, MMM YYYY")
-              title
-              excerpt
-              author {
-                name
+  <Layout>
+    <SEO />
+    <StaticQuery
+      query={graphql`
+        query BlogAllPostQuery {
+          allWordpressPost(sort: { fields: [date], order: DESC }) {
+            edges {
+              node {
+                date(formatString: "DD, MMM YYYY")
+                title
+                excerpt
+                author {
+                  name
+                }
+                categories {
+                  id
+                  name
+                }
+                slug
               }
-              categories {
+            }
+          }
+          allWordpressCategory {
+            edges {
+              node {
                 id
+                count
                 name
               }
-              slug
             }
           }
         }
-      }
-    `}
-    render={data => (
-      <Layout>
-        <SEO />
+      `}
+      render={data => (
         <div className="container">
+          <div>
+            {data.allWordpressCategory.edges.map(({ node }) => {
+              return (
+                <div key={node.id}>
+                  <div>{`${node.name}: ${node.count}`}</div>
+                </div>
+              )
+            })}
+          </div>
           <div className="row">
             <div className="col col-xs-12">
               <div className="blog-grids">
@@ -58,9 +76,9 @@ const Blog = () => (
             </div>
           </div>
         </div>
-      </Layout>
-    )}
-  />
+      )}
+    />
+  </Layout>
 )
 
 export default Blog

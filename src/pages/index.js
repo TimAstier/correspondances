@@ -1,21 +1,66 @@
 import React from "react"
-import { Link } from "gatsby"
-
+import { StaticQuery, graphql, Link } from "gatsby"
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
+const Blog = () => (
+  <StaticQuery
+    query={graphql`
+      query BlogAllPostQuery {
+        allWordpressPost(sort: { fields: [date], order: DESC }) {
+          edges {
+            node {
+              date(formatString: "DD, MMM YYYY")
+              title
+              excerpt
+              author {
+                name
+              }
+              categories {
+                id
+                name
+              }
+              slug
+            }
+          }
+        }
+      }
+    `}
+    render={data => (
+      <Layout>
+        <SEO />
+        <div className="container">
+          <div className="row">
+            <div className="col col-xs-12">
+              <div className="blog-grids">
+                {data.allWordpressPost.edges.map(({ node }) => (
+                  <div key={node.slug} className="grid">
+                    <div className="entry-body">
+                      <span className="cat">
+                        {node.categories &&
+                          node.categories.map(category => `${category.name}, `)}
+                      </span>
+                      <h3>
+                        <Link
+                          to={node.slug}
+                          dangerouslySetInnerHTML={{ __html: node.title }}
+                        />
+                      </h3>
+                      <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
+                      <div className="read-more-date">
+                        <Link to={node.slug}>Read More.</Link>
+                        <span className="date">{node.date}</span>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </Layout>
+    )}
+  />
 )
 
-export default IndexPage
+export default Blog

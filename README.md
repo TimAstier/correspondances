@@ -9,6 +9,17 @@
 - explicit the relations between ideas
 - learn web technologies and practice UI development
 
+## Roadmap
+
+- [x] Fetch posts from Wordpress
+- [x] Markdown articles
+- [ ] Display both WP and MD articles in index.js
+- [ ] Same layout for WP and MD articles
+- [ ] Support formated code snippets in markdown
+- [ ] Improve layout (see overreacted.io)
+- [ ] Night mode
+- [ ] Categories
+
 ## Components
 
 - articles
@@ -41,5 +52,6 @@
 
 - [Gatsby quickstart](https://www.gatsbyjs.org/docs/quick-start/)
 - [Adding markdown pages](https://www.gatsbyjs.org/docs/adding-markdown-pages/)
+- [Build a blog with React, Wordpress using Gatsby](https://medium.com/@mjadav/build-a-blog-with-react-wordpress-using-gatsby-4cdfb6ce2004)
 - [Gatsby tutorial](https://www.gatsbyjs.org/docs/awesome-gatsby-resources/#gatsby-tutorials)
 - [Overreacted.io sources](https://github.com/gaearon/overreacted.io/tree/master/src)

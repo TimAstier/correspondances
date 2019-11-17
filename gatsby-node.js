@@ -1,11 +1,13 @@
 const path = require(`path`)
+const slash = require(`slash`)
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
-  const blogPostTemplate = path.resolve(`src/templates/blogTemplate.js`)
+  const MarkdownPost = path.resolve(`src/templates/MarkdownPost.js`)
 
-  const result = await graphql(`
+  // Query content for Markdown posts
+  const markdownResult = await graphql(`
     {
       allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }
@@ -22,17 +24,43 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     }
   `)
 
+  markdownResult.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    createPage({
+      path: node.frontmatter.path,
+      component: MarkdownPost,
+      context: {}, // additional data can be passed via context
+    })
+  })
+
   // Handle errors
-  if (result.errors) {
+  if (markdownResult.errors) {
     reporter.panicOnBuild(`Error while running GraphQL query.`)
     return
   }
 
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  const WordpressPost = path.resolve(`./src/templates/WordpressPost.js`)
+
+  // Query content for WordPress posts
+  const result = await graphql(`
+    query {
+      allWordpressPost {
+        edges {
+          node {
+            id
+            slug
+          }
+        }
+      }
+    }
+  `)
+
+  result.data.allWordpressPost.edges.forEach(edge => {
     createPage({
-      path: node.frontmatter.path,
-      component: blogPostTemplate,
-      context: {}, // additional data can be passed via context
+      path: edge.node.slug,
+      component: slash(WordpressPost),
+      context: {
+        id: edge.node.id,
+      },
     })
   })
 }

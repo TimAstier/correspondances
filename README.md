@@ -33,5 +33,13 @@
 
 ## Built with
 
-- React
-- Gatsby - [gatsby-starter-default](https://github.com/gatsbyjs/gatsby-starter-default)
+- react
+- gatsby
+- [gatsby-starter-default](https://github.com/gatsbyjs/gatsby-starter-default)
+
+## Resources
+
+- [Gatsby quickstart](https://www.gatsbyjs.org/docs/quick-start/)
+- [Adding markdown pages](https://www.gatsbyjs.org/docs/adding-markdown-pages/)
+- [Gatsby tutorial](https://www.gatsbyjs.org/docs/awesome-gatsby-resources/#gatsby-tutorials)
+- [Overreacted.io sources](https://github.com/gaearon/overreacted.io/tree/master/src)

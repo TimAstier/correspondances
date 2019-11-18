@@ -15,17 +15,16 @@
 - [x] Code snippets in markdown with Prismjs
 - [x] Night mode
 - [x] Time to read
+- [x] Post.spoiler
 - [ ] Fix fonts
 - [ ] Site title? Correspondances.io
 - [ ] Categories (available on HomePage via Emojis!)
-- [ ] Post.spoiler
 - [ ] Read Gatsby docs!
 - [ ] Eslint
 - [ ] Articles slug
 - [ ] Typescript? See [here](https://blog.logrocket.com/set-up-a-typescript-gatsby-app/)
 - [ ] Images in markdown
-- [ ] Support formated code snippets in markdown
-- [ ] Improve layout (see overreacted.io)
+- [ ] Fix white background when scrolling down (see overreacted.io)
 - [ ] Article tags
 - [ ] Link to edit on Github
 

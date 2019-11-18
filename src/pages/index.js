@@ -9,7 +9,7 @@ const Blog = ({ data }) => {
   const posts = data.allMarkdownRemark.edges
 
   return (
-    <Layout>
+    <Layout title="Correspondances" location={{ pathname: "/" }}>
       <SEO title="Correspondances" />
       <main>
         {posts.map(({ node }) => {

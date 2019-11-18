@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import Toggle from "./Toggle"
 import Helmet from "react-helmet"
 
-import { rhythm } from "../utils/typography"
+import { rhythm, scale } from "../utils/typography"
 import sun from "../assets/sun.png"
 import moon from "../assets/moon.png"
 
@@ -18,30 +18,55 @@ class Layout extends React.Component {
     }
   }
   renderHeader() {
-    return (
-      <h3
-        style={{
-          fontFamily: "Montserrat, sans-serif",
-          marginTop: 0,
-          marginBottom: 0,
-          height: 42, // because
-          lineHeight: "2.625rem",
-        }}
-      >
-        <Link
-          style={{
-            boxShadow: "none",
-            textDecoration: "none",
-            color: "rgb(255, 167, 196)",
-          }}
-          to={"/"}
-        >
-          Correspondances
-        </Link>
-      </h3>
-    )
-  }
+    const { location, title } = this.props
+    const rootPath = `${__PATH_PREFIX__}/`
 
+    if (location.pathname === rootPath) {
+      return (
+        <h1
+          style={{
+            ...scale(0.75),
+            marginBottom: 0,
+            marginTop: 0,
+          }}
+        >
+          <Link
+            style={{
+              boxShadow: "none",
+              textDecoration: "none",
+              color: "var(--textTitle)",
+            }}
+            to={"/"}
+          >
+            {title}
+          </Link>
+        </h1>
+      )
+    } else {
+      return (
+        <h3
+          style={{
+            fontFamily: "Montserrat, sans-serif",
+            marginTop: 0,
+            marginBottom: 0,
+            height: 42, // because
+            lineHeight: "2.625rem",
+          }}
+        >
+          <Link
+            style={{
+              boxShadow: "none",
+              textDecoration: "none",
+              color: "rgb(255, 167, 196)",
+            }}
+            to={"/"}
+          >
+            {title}
+          </Link>
+        </h3>
+      )
+    }
+  }
   render() {
     const { children } = this.props
 
@@ -87,7 +112,7 @@ class Layout extends React.Component {
                       src={moon}
                       width="16"
                       height="16"
-                      alt=""
+                      role="presentation"
                       style={{ pointerEvents: "none" }}
                     />
                   ),
@@ -96,7 +121,7 @@ class Layout extends React.Component {
                       src={sun}
                       width="16"
                       height="16"
-                      alt=""
+                      role="presentation"
                       style={{ pointerEvents: "none" }}
                     />
                   ),

@@ -17,7 +17,10 @@ const Post = ({ data }) => {
   const editUrl = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO_NAME}/edit/master/src/pages/${post.slug}`
 
   return (
-    <Layout>
+    <Layout
+      title="Correspondances"
+      location={{ pathname: post.frontmatter.pathname }}
+    >
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.spoiler}

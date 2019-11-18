@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import Toggle from "./Toggle"
 import Helmet from "react-helmet"
 
-import { rhythm, scale } from "../utils/typography"
+import { rhythm } from "../utils/typography"
 import sun from "../assets/sun.png"
 import moon from "../assets/moon.png"
 
@@ -87,7 +87,7 @@ class Layout extends React.Component {
                       src={moon}
                       width="16"
                       height="16"
-                      role="presentation"
+                      alt=""
                       style={{ pointerEvents: "none" }}
                     />
                   ),
@@ -96,7 +96,7 @@ class Layout extends React.Component {
                       src={sun}
                       width="16"
                       height="16"
-                      role="presentation"
+                      alt=""
                       style={{ pointerEvents: "none" }}
                     />
                   ),

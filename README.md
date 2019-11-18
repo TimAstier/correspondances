@@ -1,51 +1,66 @@
 <div align="center">
 <h1>Correspondances</h1>
-<p>A wiki-like blog built with pages and components</p>
+<p>A personal wiki/blog built with pages and components</p>
 </div>
 
 ## Motivations
 
-- refine learnings
-- explicit the relations between ideas
-- learn web technologies and practice UI development
+- Refine and share learnings
+- Explicit relations between ideas
+- Learn web technologies and practice UI development
 
 ## Roadmap
 
-- [x] Fetch posts from Wordpress
-- [x] Markdown articles
-- [x] Code snippets in markdown via prismjs
-- [ ] Eslint
+- [x] Markdown articles with MarkdownRemark
+- [x] Code snippets in markdown with Prismjs
+- [x] Night mode
+- [x] Time to read
+- [ ] Fix fonts
+- [ ] Site title? Correspondances.io
+- [ ] Categories (available on HomePage via Emojis!)
 - [ ] Post.spoiler
-- [ ] Fix fonts and font-style
-- [ ] Only MD articles (drop wordpress)
+- [ ] Read Gatsby docs!
+- [ ] Eslint
+- [ ] Articles slug
+- [ ] Typescript? See [here](https://blog.logrocket.com/set-up-a-typescript-gatsby-app/)
 - [ ] Images in markdown
-- [ ] Same layout for WP and MD articles
 - [ ] Support formated code snippets in markdown
 - [ ] Improve layout (see overreacted.io)
-- [ ] Night mode
-- [ ] Categories
+- [ ] Article tags
+- [ ] Link to edit on Github
 
 ## Components
 
 - articles
 - external articles
 - books
-- videos
+- videos (favorite videos)
 - quotes
 - concepts
 - podcasts
 - poems
+- book reviews (display covers)
+- projects (github + screenshots + demo)
 
 ## Topics
 
-- learning
-- web development
-- personal growth
-- beauty
-- helping others
-- thinking (time)
-- flow
-- spirituality
+- 💻 web development
+- 🧗 climbing
+- 🎸 guitar
+- 📚 reading
+- 🇫🇷 🇬🇧 🇨🇳 🇸🇪 languages
+- 🙃 handstands
+- ✏️ writing
+- ♞ chess
+  - learning
+  - spirituality
+  - personal growth
+  - beauty
+  - helping others
+  - thinking (time)
+  - flow
+  - spirituality
+  - Movement is life and life is death. More lines of code. Drawbacks in a chess move.
 
 ## Built with
 

@@ -2,27 +2,14 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import "../fonts/fonts-post.css"
-// import Bio from '../components/Bio';
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
-// import Signup from '../components/Signup';
-// import Panel from '../components/Panel';
-// import { formatPostDate, formatReadingTime } from '../utils/helpers';
-// import { rhythm } from "../utils/typography"
-// import {
-//   codeToLanguage,
-//   createLanguageLink,
-//   loadFontsForCode,
-// } from '../utils/i18n';
+import { rhythm } from "../utils/typography"
 
 const GITHUB_USERNAME = "TimAstier"
 const GITHUB_REPO_NAME = "corrrespondances"
 
-// const MarkdownPost = ({ data }) => {
-//   const { markdownRemark } = data
-//   const { frontmatter, html } = markdownRemark
-
-const MarkdownPost = ({ data }) => {
+const Post = ({ data }) => {
   const { markdownRemark } = data
   const { html } = markdownRemark
 
@@ -33,8 +20,7 @@ const MarkdownPost = ({ data }) => {
     <Layout>
       <SEO
         title={post.frontmatter.title}
-        // description={post.frontmatter.spoiler}
-        // slug={post.fields.slug}
+        description={post.frontmatter.spoiler}
       />
       <main>
         <article>
@@ -57,8 +43,7 @@ const MarkdownPost = ({ data }) => {
         <h3
           style={{
             fontFamily: "Montserrat, sans-serif",
-            // marginTop: rhythm(0.25),
-            marginTop: 0.25,
+            marginTop: rhythm(0.25),
           }}
         >
           <Link
@@ -77,7 +62,7 @@ const MarkdownPost = ({ data }) => {
   )
 }
 
-export default MarkdownPost
+export default Post
 
 export const pageQuery = graphql`
   query($path: String!) {

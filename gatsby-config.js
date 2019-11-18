@@ -1,7 +1,3 @@
-require("dotenv").config({
-  path: ".env",
-})
-
 module.exports = {
   siteMetadata: {
     title: `Correspondances`,
@@ -10,6 +6,8 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -47,28 +45,6 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: `gatsby-source-wordpress`,
-      options: {
-        baseUrl: `timotheeastier.com`,
-        protocol: `https`,
-        hostingWPCOM: true,
-        useACF: false,
-        auth: {
-          wpcom_app_clientSecret: process.env.WORDPRESS_SECRET,
-          wpcom_app_clientId: process.env.WORDPRESS_CLIENTID,
-          wpcom_user: process.env.WORDPRESS_USERNAME,
-          wpcom_pass: process.env.WORDPRESS_PASSWORD,
-        },
-        verboseOutput: false,
-        searchAndReplaceContentUrls: {
-          sourceUrl: "https://timotheeastier.wordpress.com",
-          replacementUrl: "https://timotheeastier.com",
-        },
-      },
-    },
-    "gatsby-transformer-sharp",
-    "gatsby-plugin-sharp",
     {
       resolve: "gatsby-plugin-typography",
       options: {

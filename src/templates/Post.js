@@ -40,7 +40,7 @@ const Post = ({ data }) => {
                 marginTop: rhythm(-4 / 5),
               }}
             >
-              {formatPostDate(post.frontmatter.date)}
+              {formatPostDate(post.frontmatter.date, "en")}
               {` • ${formatReadingTime(post.timeToRead)}`}
             </p>
           </header>

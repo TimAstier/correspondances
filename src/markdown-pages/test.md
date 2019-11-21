@@ -19,7 +19,7 @@ The exact way to run different code in development depends on your JavaScript bu
 
 ## How to make a table
 
-```js
+```js {2}
 <table>
   <p>Hello</p>
 </table>

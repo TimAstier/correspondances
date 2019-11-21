@@ -16,15 +16,17 @@
 - [x] Night mode
 - [x] Time to read
 - [x] Post.spoiler
-- [ ] Fix fonts
+- [x] Fix fonts
+- [x] Highlight rows in snippets
+- [ ] React in md
+- [ ] Isolate articles in folders
+- [ ] Social media links
 - [ ] Site title? Correspondances.io
-- [ ] Categories (available on HomePage via Emojis!)
+- [ ] Categories, author, keywords in frontmatter
 - [ ] Read Gatsby docs!
 - [ ] Eslint
 - [ ] Articles slug
-- [ ] Typescript? See [here](https://blog.logrocket.com/set-up-a-typescript-gatsby-app/)
 - [ ] Images in markdown
-- [ ] Fix white background when scrolling down (see overreacted.io)
 - [ ] Article tags
 - [ ] Link to edit on Github
 

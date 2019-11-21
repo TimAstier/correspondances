@@ -11,6 +11,19 @@ const Blog = ({ data }) => {
   return (
     <Layout title="Correspondances" location={{ pathname: "/" }}>
       <SEO title="Correspondances" />
+      <div>
+        <ul style={{ fontSize: "24px" }}>
+          <li>💻 Web development</li>
+          <li>⛰ Climbing</li>
+          <li>🎸 Guitar</li>
+          <li>📚 Reading</li>
+          <li>🇨🇳 Chinese</li>
+          <li>🇸🇪 Swedish</li>
+          <li>🙃 Handstands</li>
+          <li>✏️ Writing</li>
+          <li>♞ Chess</li>
+        </ul>
+      </div>
       <main>
         {posts.map(({ node }) => {
           return (

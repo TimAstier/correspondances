@@ -6,7 +6,7 @@ import { rhythm } from "../utils/typography"
 import SEO from "../components/Seo"
 
 const Blog = ({ data }) => {
-  const posts = data.allMarkdownRemark.edges
+  const posts = data.allMdx.edges
 
   return (
     <Layout title="Correspondances" location={{ pathname: "/" }}>
@@ -64,7 +64,7 @@ export default Blog
 
 export const pageQuery = graphql`
   query BlogAllPostQuery {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
           timeToRead

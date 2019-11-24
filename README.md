@@ -18,17 +18,19 @@
 - [x] Post.spoiler
 - [x] Fix fonts
 - [x] Highlight rows in snippets
-- [ ] React in md
-- [ ] Isolate articles in folders
-- [ ] Social media links
-- [ ] Site title? Correspondances.io
+- [x] JSX in md
+- [x] Isolate articles in folders
 - [ ] Categories, author, keywords in frontmatter
+- [ ] Images in markdown
+- [ ] Site title? Correspondances.io
+- [ ] Articles slug
+- [ ] Social media links
 - [ ] Read Gatsby docs!
 - [ ] Eslint
-- [ ] Articles slug
-- [ ] Images in markdown
-- [ ] Article tags
+- [ ] Deploy
+- [ ] Bio
 - [ ] Link to edit on Github
+- [ ] gatsby-plugin-feed-mdx ?
 
 ## Components
 
@@ -62,6 +64,18 @@
   - flow
   - spirituality
   - Movement is life and life is death. More lines of code. Drawbacks in a chess move.
+
+## Articles ideas
+
+- Change the speed of keyboard.
+- Change the speed of switching screens.
+- Color pickerHow to make this into a website.
+- How to get started with VS Code.
+- How to get a folder in VS Code.
+- Github. Github workflows.
+- Change the speed of keyboard.
+- Change the speed of switching screens.
+- Color picker
 
 ## Built with
 

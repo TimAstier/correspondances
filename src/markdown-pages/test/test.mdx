@@ -1,0 +1,29 @@
+---
+path: "/test"
+title: Testing JSX in md
+date: "2019-08-04"
+spoiler: Meet the blue square.
+---
+
+import { Square } from './Square';
+
+Here is a blue square:
+
+<Square />
+
+<br />
+
+And here is the code for this blue square:
+
+```js
+import React from "react"
+
+export const Square = () => {
+  return (
+    <div style={{ backgroundColor: "blue", height: "230px", width: "230px" }} />
+  )
+}
+
+
+```
+

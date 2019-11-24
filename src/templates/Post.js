@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import { MDXRenderer } from "gatsby-plugin-mdx"
 
 import "../fonts/fonts-post.css"
 import Layout from "../components/Layout"
@@ -11,10 +12,8 @@ const GITHUB_USERNAME = "TimAstier"
 const GITHUB_REPO_NAME = "corrrespondances"
 
 const Post = ({ data }) => {
-  const { markdownRemark } = data
-  const { html } = markdownRemark
-
-  const post = markdownRemark
+  const { mdx } = data
+  const post = mdx
   const editUrl = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO_NAME}/edit/master/src/pages/${post.slug}`
 
   return (
@@ -44,7 +43,7 @@ const Post = ({ data }) => {
               {` • ${formatReadingTime(post.timeToRead)}`}
             </p>
           </header>
-          <div dangerouslySetInnerHTML={{ __html: html }} />
+          <MDXRenderer>{post.body}</MDXRenderer>
           <footer>
             <p>
               <a href={editUrl} target="_blank" rel="noopener noreferrer">
@@ -84,8 +83,8 @@ export default Post
 
 export const pageQuery = graphql`
   query($path: String!) {
-    markdownRemark(frontmatter: { path: { eq: $path } }) {
-      html
+    mdx(frontmatter: { path: { eq: $path } }) {
+      body
       timeToRead
       frontmatter {
         date(formatString: "MMMM DD, YYYY")

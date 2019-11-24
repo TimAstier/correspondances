@@ -20,8 +20,8 @@
 - [x] Highlight rows in snippets
 - [x] JSX in md
 - [x] Isolate articles in folders
+- [x] Images in markdown
 - [ ] Categories, author, keywords in frontmatter
-- [ ] Images in markdown
 - [ ] Site title? Correspondances.io
 - [ ] Articles slug
 - [ ] Social media links

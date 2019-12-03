@@ -21,7 +21,9 @@
 - [x] JSX in md
 - [x] Isolate articles in folders
 - [x] Images in markdown
+- [ ] Draft category
 - [ ] Categories, author, keywords in frontmatter
+- [ ] When did I started?
 - [ ] Site title? Correspondances.io
 - [ ] Articles slug
 - [ ] Social media links
@@ -38,7 +40,7 @@
 - external articles
 - books
 - videos (favorite videos)
-- quotes
+- quotes: Powerful tools to remember one powerful ideas and transmit it to others.
 - concepts
 - podcasts
 - poems
@@ -55,6 +57,7 @@
 - 🙃 handstands
 - ✏️ writing
 - ♞ chess
+- GAMES
   - learning
   - spirituality
   - personal growth

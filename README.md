@@ -3,6 +3,19 @@
 <p>A personal chess blog</p>
 </div>
 
+## Motivation
+
+Study chess openings with:
+
+- opening name
+- opening ideas
+- main plans
+- common tactics
+- reference games
+- must known lines
+- personal win rate
+- interactive reviews
+
 ## Roadmap
 
 - [x] Markdown articles with MarkdownRemark
@@ -15,7 +28,6 @@
 - [x] JSX in md
 - [x] Isolate articles in folders
 - [x] Images in markdown
-- [ ] Draft category
 - [ ] Categories, author, keywords in frontmatter
 - [ ] Articles slug
 - [ ] Eslint

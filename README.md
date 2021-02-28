@@ -7,27 +7,30 @@
 
 Study chess openings with:
 
-- opening name
-- opening ideas
-- main plans
-- common tactics
-- reference games
-- must known lines
-- personal win rate
-- interactive reviews
+- Intro
+- Opening ideas
+- Main plans
+- Common tactics
+- Reference games
+- Must known lines
+- Personal win rate
+- Interactive reviews
+- Bibliography
 
 ## Roadmap
 
 - [x] Markdown articles with MarkdownRemark
 - [x] Code snippets in markdown with Prismjs
 - [x] Night mode
-- [x] Time to read
 - [x] Post.spoiler
 - [x] Fix fonts
 - [x] Highlight rows in snippets
 - [x] JSX in md
 - [x] Isolate articles in folders
 - [x] Images in markdown
+- [ ] Remove time to read
+- [ ] Add wrapper with margins to Chessground component
+- [ ] Fix links to edit on Github
 - [ ] Categories, author, keywords in frontmatter
 - [ ] Articles slug
 - [ ] Eslint

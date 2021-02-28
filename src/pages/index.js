@@ -4,6 +4,7 @@ import Layout from "../components/Layout"
 import { formatPostDate, formatReadingTime } from "../utils/helpers"
 import { rhythm } from "../utils/typography"
 import SEO from "../components/Seo"
+import 'react-chessground/dist/styles/chessground.css'
 
 const Blog = ({ data }) => {
   const posts = data.allMdx.edges
@@ -11,19 +12,7 @@ const Blog = ({ data }) => {
   return (
     <Layout title="Correspondances" location={{ pathname: "/" }}>
       <SEO title="Correspondances" />
-      <div>
-        <ul style={{ fontSize: "24px" }}>
-          <li>💻 Web development</li>
-          <li>⛰ Climbing</li>
-          <li>🎸 Guitar</li>
-          <li>📚 Reading</li>
-          <li>🇨🇳 Chinese</li>
-          <li>🇸🇪 Swedish</li>
-          <li>🙃 Handstands</li>
-          <li>✏️ Writing</li>
-          <li>♞ Chess</li>
-        </ul>
-      </div>
+      <div>Personal ♞ Chess Blog</div>
       <main>
         {posts.map(({ node }) => {
           return (
